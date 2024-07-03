@@ -88,14 +88,7 @@ Reference:
 
 ultralytics/cfg/datasets/thermal_jiali.yaml
 
-yolo val model=jameslahm/yolov10n data=thermal_jiali.yaml batch=256
-
-```
-# parent
-# ├── ultralytics
-# └── datasets
-#     └── thermal_jiali
-```
+yolo val model=jameslahm/yolov10n data=thermal_jiali.yaml batch=8			
 
 - Category 1:  People
 - Category 2:  Bicycles -bicycles and motorcycles (not consistent with coco)
