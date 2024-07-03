@@ -302,8 +302,14 @@ def convert_coco(
                         keypoints.append(
                             box + (np.array(ann["keypoints"]).reshape(-1, 3) / np.array([w, h, 1])).reshape(-1).tolist()
                         )
-
+                        
+            # Ensure the output directory exists
+            output_dir = (fn / f).parent
+            output_dir.mkdir(parents=True, exist_ok=True)
+            
             # Write
+            output_file = (fn / f).with_suffix(".txt")
+            print(f"Attempting to open file: {output_file}")  
             with open((fn / f).with_suffix(".txt"), "a") as file:
                 for i in range(len(bboxes)):
                     if use_keypoints:
