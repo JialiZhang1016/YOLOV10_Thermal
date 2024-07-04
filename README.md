@@ -64,6 +64,10 @@ But before you run it, you have add these 2 lines before you run the code. It wi
 
 Then we can use this python script `jiali_converter_to_yolo.py` to convert.
 
+There is a issue after convert: the lable of the `dog` is 15. We need to change it to be 3.
+
+Here is the code to change the lable: `/Users/captainzhang/Desktop/Yolo/datasets/15to3.py`
+
 Reference:
 
 - https://docs.ultralytics.com/datasets/detect/#port-or-convert-label-formats
@@ -88,7 +92,7 @@ Reference:
 
 ultralytics/cfg/datasets/thermal_jiali.yaml
 
-yolo val model=jameslahm/yolov10n data=thermal_jiali.yaml batch=8			
+yolo val model=jameslahm/yolov10n data=thermal_jiali.yaml batch=8
 
 - Category 1:  People
 - Category 2:  Bicycles -bicycles and motorcycles (not consistent with coco)
@@ -105,6 +109,8 @@ yolo detect train data=thermal_jiali.yaml model=ultralytics/cfg/models/v10/yolov
 ### 2.3 Validation
 
 yolo val model=ultralytics/cfg/models/v10/yolov10n.yaml data=thermal_jiali.yaml batch=8
+
+yolo val model=jameslahm/yolov10n data=coco8.yaml batch=8
 
 yolo predict model=jameslahm/yolov10n
 
