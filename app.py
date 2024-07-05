@@ -58,7 +58,7 @@ def app():
                 model_id = gr.Dropdown(
                     label="Model",
                     choices=[
-                        "/Users/captainzhang/Desktop/Yolo/yolov10/runs/detect/train12/weights/best.pt",
+                        "/Users/captainzhang/Desktop/Yolo/Mill_model/best.pt",
                         "yolov10n",
                         "yolov10s",
                         "yolov10m",
@@ -119,13 +119,13 @@ def app():
             examples=[
                 [
                     "ultralytics/assets/bus.jpg",
-                    "/Users/captainzhang/Desktop/Yolo/yolov10/runs/detect/train12/weights/best.pt",
+                    "/Users/captainzhang/Desktop/Yolo/Mill_model/best.pt",
                     640,
                     0.25,
                 ],
                 [
                     "ultralytics/assets/zidane.jpg",
-                    "/Users/captainzhang/Desktop/Yolo/yolov10/runs/detect/train12/weights/best.pt",
+                    "/Users/captainzhang/Desktop/Yolo/Mill_model/best.pt",
                     640,
                     0.25,
                 ],
